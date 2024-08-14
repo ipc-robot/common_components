@@ -47,7 +47,16 @@ export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
 # <<< CUDA initalize <<<
 ```
 
-
+你可以通过`stat /usr/local/cuda`来查看当前指向的CUDA版本。比如当前指向`cuda-11.8`
+```
+ipc-robot@ipcrobot-Alienware-m15-R3:~$ stat /usr/local/cuda
+  文件：/usr/local/cuda -> /usr/local/cuda-11.8
+```
+切换版本只需要修改重新创建软连接即可。
+```
+sudo rm -rf /usr/local/cuda
+sudo ln -s /usr/local/cuda-11.8 /usr/local/cuda
+```
 
 ===========
 = Summary =
