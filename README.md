@@ -16,6 +16,9 @@ alias setconda='. ~/anaconda3/bin/activate'
 # 2. 多 CUDA 版本共存
 
 尝试记录多CUDA版本在`ubuntu 22.04`上安装的过程。主要参考`https://qiyuan-z.github.io/2022/01/04/Ubuntu%E5%A4%9A%E7%89%88%E6%9C%ACcuda%E5%AE%89%E8%A3%85%E4%B8%8E%E5%88%87%E6%8D%A2/`
+首先在官网下载CUDA安装包`runfile`格式。
+
+
 
 ===========
 = Summary =
