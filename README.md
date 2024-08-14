@@ -23,9 +23,10 @@ https://qiyuan-z.github.io/2022/01/04/Ubuntu%E5%A4%9A%E7%89%88%E6%9C%ACcuda%E5%A
 ```
 sudo sh xxx.run
 ```
-然后下载CUDNN`Tar`格式。
+然后区下载CUDNN`Tar`格式，并解压。
 ```
-https://developer.nvidia.com/rdp/cudnn-archive
+官网：https://developer.nvidia.com/rdp/cudnn-archive
+解压缩：tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda11-archive.tar.xz
 ```
 
 
