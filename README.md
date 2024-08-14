@@ -34,6 +34,18 @@ sudo cp cudnn.h /usr/local/cuda-11.8/include
 sudo cp lib/libcudnn* /usr/local/cuda-11.8/lib64
 sudo chmod a+r /usr/local/cuda-11.8/include/cudnn.h /usr/local/cuda-11.8/lib64/libcudnn*
 ```
+最后配置CUDA环境
+```
+sudo gedit ~/.bashrc
+```
+打开`~/.bashrc`文件在最后加上。
+```
+# <<< CUDA initalize <<<
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+export PATH=$PATH:/usr/local/cuda/bin
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+```
+
 
 
 ===========
