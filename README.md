@@ -42,8 +42,7 @@ sudo gedit ~/.bashrc
 ```
 # >>> CUDA initalize >>>
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-export PATH=$PATH:/usr/local/cuda/bin
-export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+export CUDA_HOME=/usr/local/cuda
 # <<< CUDA initalize <<<
 ```
 
