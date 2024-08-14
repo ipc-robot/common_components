@@ -40,10 +40,11 @@ sudo gedit ~/.bashrc
 ```
 打开`~/.bashrc`文件在最后加上。
 ```
-# <<< CUDA initalize <<<
+# >>> CUDA initalize >>>
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 export PATH=$PATH:/usr/local/cuda/bin
 export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+# <<< CUDA initalize <<<
 ```
 
 
