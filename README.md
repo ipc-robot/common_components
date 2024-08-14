@@ -1,4 +1,19 @@
-# multiple_cuda
+# 1. Anaconda3
+下载官网的`sh`文件，然后用以下命令安装，一路回车。所有需要选择`yes or no`的部分一路回车下去，全部使用自动填充默认值。
+```
+bash Anaconda3-2024.06-1-Linux-x86_64.sh
+```
+安装完成后，配置`anaconda`环境变量。
+```
+sudo gedit ~/.bashrc
+```
+在文年最后添加
+```
+alias setconda='. ~/anaconda3/bin/activate'
+```
+然后重新开一个终端，可以通过`setconda`来激活anaconda，这样不会影响系统自带python。
+
+# 2. 多 CUDA 版本共存
 
 尝试记录多CUDA版本在`ubuntu 22.04`上安装的过程。
 
