@@ -28,7 +28,12 @@ sudo sh xxx.run
 官网：https://developer.nvidia.com/rdp/cudnn-archive
 解压缩：tar -xvf cudnn-linux-x86_64-8.9.7.29_cuda11-archive.tar.xz
 ```
-
+然后安装cuDNN。
+```
+sudo cp cudnn.h /usr/local/cuda-11.8/include
+sudo cp lib/libcudnn* /usr/local/cuda-11.8/lib64
+sudo chmod a+r /usr/local/cuda-11.8/include/cudnn.h /usr/local/cuda-11.8/lib64/libcudnn*
+```
 
 
 ===========
