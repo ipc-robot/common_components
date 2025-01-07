@@ -102,6 +102,7 @@ curl https://www.google.com/
 
 # 4. 最好的安装NVIDIA显卡驱动的方式
 `https://ubuntu.com/server/docs/nvidia-drivers-installation`
+`https://askubuntu.com/questions/1445961/22-04-1-lts-network-unclaimed-for-wireless-adapter-and-ethernet-port`
 
 For desktop:
 ```
