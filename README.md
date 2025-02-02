@@ -167,6 +167,8 @@ xdg-user-dirs-gtk-update
 epxort LANG=zh_CN
 重启系统，在登录的时候会提示是是否把英文目录转化为中文，选择不同意，并勾选不再提示。
 
+https://askubuntu.com/questions/1286738/no-wi-fi-settings-or-connection-after-switching-to-nvidia-graphics-driver
+
 You will also want to install the following additional components:
 
 sudo apt install nvidia-utils-535-server
