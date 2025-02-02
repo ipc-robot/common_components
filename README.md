@@ -76,14 +76,13 @@ To install the driver using this installer, run the following command, replacing
 
 Logfile is /var/log/cuda-installer.log
 
-# 3. 系统代理
+# 3. 系统代理（已废弃，推荐使用clash-verge）
 ```
 sudo chmod 666 /etc/environment
 sudo gedit /etc/environment
 ```
 添加以下内容
 ```
-
 http_proxy=http://127.0.0.1:7890/
 https_proxy=http://127.0.0.1:7890/
 ftp_proxy=http://127.0.0.1:7890/
@@ -160,3 +159,4 @@ You will also want to install the following additional components:
 
 sudo apt install nvidia-utils-535-server
 
+sudo apt install linux-modules-extras-6.8.0-47-generic
