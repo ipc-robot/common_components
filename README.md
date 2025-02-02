@@ -155,6 +155,18 @@ Let’s assume we want to install the 535-server driver (listed as nvidia-driver
 
 sudo ubuntu-drivers install --gpgpu nvidia:535-server
 
+
+Ubuntu更改主目录文件名为英文
+Ubuntu的语言设置成中文之后，自己主目录下的桌面、下载、文档等文件夹全部为中文汉字，使用终端时，输入十分不方便。需要把文件夹改成英文，而不更改系统语言。
+
+在终端中输入以下命令
+export LANG=en_US
+xdg-user-dirs-gtk-update
+在询问是否将目录转化为英文的窗口中选择同意
+使用命令将系统语言转化为中文
+epxort LANG=zh_CN
+重启系统，在登录的时候会提示是是否把英文目录转化为中文，选择不同意，并勾选不再提示。
+
 You will also want to install the following additional components:
 
 sudo apt install nvidia-utils-535-server
