@@ -22,7 +22,7 @@ sudo apt upgrade
 ```
 确认都是最新的。
 
-# 4. 最好的安装NVIDIA显卡驱动的方式
+# 1. 最好的安装NVIDIA显卡驱动的方式
 `https://ubuntu.com/server/docs/nvidia-drivers-installation`
 `https://askubuntu.com/questions/1445961/22-04-1-lts-network-unclaimed-for-wireless-adapter-and-ethernet-port`
 
@@ -34,22 +34,9 @@ sudo ubuntu-drivers list
 ```
 sudo ubuntu-drivers install <填入驱动名>
 ```
+例如`sudo ubuntu-drivers install nvidia-driver-550-open`
 
-Installing the drivers on servers and/or for computing purposes
-
-You can either rely on automatic detection, which will install the driver that is considered the best match for your hardware:
-
-```
-sudo ubuntu-drivers install --gpgpu
-```
-
-Or you can tell the ubuntu-drivers tool which driver you would like installed. If this is the case, you will have to use the driver version (such as 535) and the -server suffix that you saw when you used the ubuntu-drivers list --gpgpu command.
-
-Let’s assume we want to install the 535-server driver (listed as nvidia-driver-535-server):
-
-sudo ubuntu-drivers install --gpgpu nvidia:535-server
-
-# 1. miniforge
+# 2. miniforge(anaconda 替代品)
 前往`https://github.com/conda-forge/miniforge`下载`sh`文件，然后用以下命令安装，一路回车。所有需要选择`yes or no`的部分一路回车下去，全部使用自动填充默认值。
 ```
 bash Miniforge3-24.11.3-0-Linux-x86_64.sh
