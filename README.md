@@ -1,4 +1,6 @@
 # 0.系统安装
+安装引导界面选择中文，但是系统语言选择英语，一路下一步。
+
 安装完成之后，先进行换源(系统源、ROS源、python源)。
 ```
 wget http://fishros.com/install -O fishros && . fishros
@@ -12,6 +14,40 @@ sudo apt upgrade
 更新完成后`reboot`
 
 然后进入`ubuntu`的系统更新器，再更新一遍内核，然后`reboot`。
+
+最后再检查一下
+```
+sudo apt update
+sudo apt upgrade
+```
+确认都是最新的。
+
+# 4. 最好的安装NVIDIA显卡驱动的方式
+`https://ubuntu.com/server/docs/nvidia-drivers-installation`
+`https://askubuntu.com/questions/1445961/22-04-1-lts-network-unclaimed-for-wireless-adapter-and-ethernet-port`
+
+检索可用的显卡驱动：
+```
+sudo ubuntu-drivers list
+```
+寻找最新版本号，带`open`字样的驱动。
+```
+sudo ubuntu-drivers install <填入驱动名>
+```
+
+Installing the drivers on servers and/or for computing purposes
+
+You can either rely on automatic detection, which will install the driver that is considered the best match for your hardware:
+
+```
+sudo ubuntu-drivers install --gpgpu
+```
+
+Or you can tell the ubuntu-drivers tool which driver you would like installed. If this is the case, you will have to use the driver version (such as 535) and the -server suffix that you saw when you used the ubuntu-drivers list --gpgpu command.
+
+Let’s assume we want to install the 535-server driver (listed as nvidia-driver-535-server):
+
+sudo ubuntu-drivers install --gpgpu nvidia:535-server
 
 # 1. miniforge
 前往`https://github.com/conda-forge/miniforge`下载`sh`文件，然后用以下命令安装，一路回车。所有需要选择`yes or no`的部分一路回车下去，全部使用自动填充默认值。
