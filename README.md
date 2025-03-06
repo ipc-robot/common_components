@@ -76,27 +76,9 @@ To install the driver using this installer, run the following command, replacing
 
 Logfile is /var/log/cuda-installer.log
 
-# 3. 系统代理（已废弃，推荐使用clash-verge）
+# 3. 系统代理：Clash verge
 ```
-sudo chmod 666 /etc/environment
-sudo gedit /etc/environment
-```
-添加以下内容
-```
-http_proxy=http://127.0.0.1:7890/
-https_proxy=http://127.0.0.1:7890/
-ftp_proxy=http://127.0.0.1:7890/
-HTTP_PROXY=http://127.0.0.1:7890/
-HTTPS_PROXY=http://127.0.0.1:7890/
-FTP_PROXY=http://127.0.0.1:7890/
-```
-然后将文件权限改为只读
-```
-sudo chmod 444 /etc/environment
-```
-新建一个终端，输入以下查看是否更换成功。
-```
-curl https://www.google.com/
+https://github.com/clash-verge-rev/clash-verge-rev
 ```
 
 # 4. 最好的安装NVIDIA显卡驱动的方式
