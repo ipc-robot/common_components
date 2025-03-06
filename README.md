@@ -1,5 +1,5 @@
 # 0.系统安装
-安装引导界面选择中文，但是系统语言选择英语，一路下一步。
+安装引导界面选择中文，一路下一步。
 
 安装完成之后，先进行换源(系统源、ROS源、python源)。
 ```
@@ -22,7 +22,21 @@ sudo apt upgrade
 ```
 确认都是最新的。
 
-# 1. 最好的安装`NVIDIA`显卡驱动的方式
+# 1. 最好的更改主目录文件名为英文的方式
+Ubuntu的语言设置成中文之后，自己主目录下的桌面、下载、文档等文件夹全部为中文汉字，使用终端时，输入十分不方便。需要把文件夹改成英文，而不更改系统语言。
+
+在终端中输入以下命令
+```
+export LANG=en_US
+xdg-user-dirs-gtk-update
+```
+在询问是否将目录转化为英文的窗口中选择同意，使用命令将系统语言转化为中文。
+```
+epxort LANG=zh_CN
+```
+`reboot`，在登录的时候会提示是是否把英文目录转化为中文，选择不同意，并勾选不再提示。
+
+# 2. 最好的安装`NVIDIA`显卡驱动的方式
 `https://ubuntu.com/server/docs/nvidia-drivers-installation`
 `https://askubuntu.com/questions/1445961/22-04-1-lts-network-unclaimed-for-wireless-adapter-and-ethernet-port`
 
@@ -36,7 +50,7 @@ sudo ubuntu-drivers install <填入驱动名>
 ```
 例如`sudo ubuntu-drivers install nvidia-driver-550-open`
 
-# 2. 最好的安装`Python`包管理器的方式：`Miniforge`(`C++`重写的`Anaconda`)
+# 3. 最好的安装`Python`包管理器的方式：`Miniforge`(`C++`重写的`Anaconda`)
 前往`https://github.com/conda-forge/miniforge`下载`sh`文件，然后用以下命令安装，一路回车。所有需要选择`yes or no`的部分一路回车下去，全部使用自动填充默认值。
 ```
 bash Miniforge3-24.11.3-0-Linux-x86_64.sh
@@ -52,7 +66,7 @@ alias setconda='. ~/miniforge3/bin/activate'
 然后重新开一个终端，可以通过`setconda`来激活`miniforge`，这样不会影响系统自带python。
 `Minoforge`的命令与`Anaconda`一致，你可以使用`mamba`替换`conda`来获得加速。
 
-# 3. 最好的安装`CUDA`的方式（多CUDA并存)
+# 4. 最好的安装`CUDA`的方式（多CUDA并存)
 主要参考
 ```
 https://qiyuan-z.github.io/2022/01/04/Ubuntu%E5%A4%9A%E7%89%88%E6%9C%ACcuda%E5%AE%89%E8%A3%85%E4%B8%8E%E5%88%87%E6%8D%A2/
@@ -96,27 +110,7 @@ sudo rm -rf /usr/local/cuda
 sudo ln -s /usr/local/cuda-11.8 /usr/local/cuda
 ```
 
-# 3. 系统代理：Clash verge
+# 5. 最好的系统代理：Clash verge
 ```
 https://github.com/clash-verge-rev/clash-verge-rev
 ```
-
-#
-Ubuntu更改主目录文件名为英文
-Ubuntu的语言设置成中文之后，自己主目录下的桌面、下载、文档等文件夹全部为中文汉字，使用终端时，输入十分不方便。需要把文件夹改成英文，而不更改系统语言。
-
-在终端中输入以下命令
-export LANG=en_US
-xdg-user-dirs-gtk-update
-在询问是否将目录转化为英文的窗口中选择同意
-使用命令将系统语言转化为中文
-epxort LANG=zh_CN
-重启系统，在登录的时候会提示是是否把英文目录转化为中文，选择不同意，并勾选不再提示。
-
-https://askubuntu.com/questions/1286738/no-wi-fi-settings-or-connection-after-switching-to-nvidia-graphics-driver
-
-You will also want to install the following additional components:
-
-sudo apt install nvidia-utils-535-server
-
-sudo apt install linux-modules-extras-6.8.0-47-generic
