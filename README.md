@@ -49,7 +49,7 @@ sudo gedit ~/.bashrc
 ```
 alias setconda='. ~/miniforge3/bin/activate'
 ```
-然后重新开一个终端，可以通过`setconda`来激活anaconda，这样不会影响系统自带python。
+然后重新开一个终端，可以通过`setconda`来激活`miniforge`，这样不会影响系统自带python。
 
 # 3. 最好的安装`CUDA`的方式（多CUDA并存)
 主要参考
