@@ -1,7 +1,7 @@
 # 1. miniforge
 前往`https://github.com/conda-forge/miniforge`下载`sh`文件，然后用以下命令安装，一路回车。所有需要选择`yes or no`的部分一路回车下去，全部使用自动填充默认值。
 ```
-bash miniforge3-2024.06-1-Linux-x86_64.sh
+bash Miniforge3-24.11.3-0-Linux-x86_64.sh
 ```
 安装完成后，配置`miniforge3`环境变量。
 ```
