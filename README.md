@@ -114,3 +114,65 @@ sudo ln -s /usr/local/cuda-11.8 /usr/local/cuda
 ```
 https://github.com/clash-verge-rev/clash-verge-rev
 ```
+
+# 6. 最好的`docker`安装并还源
+参考`https://docs.docker.com/engine/install/ubuntu/`
+## 首先安装`docker engine`
+
+```
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+```
+
+```
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+```
+
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+## 然后更换`docker`源，参考`https://docker.xuanyuan.me/`
+1、修改 /etc/docker/daemon.json，设置 registry mirror，具体命令如下:
+```
+sudo nano /etc/docker/daemon.json
+```
+添加
+```
+{
+    "registry-mirrors": [
+        "https://docker.1ms.run",
+        "https://docker.xuanyuan.me"
+    ]
+}
+```
+2、重启`docker`
+```
+systemctl daemon-reload
+systemctl restart docker
+```
+3、运行`hello world`
+```
+sudo docker run hello-world
+```
+
+## 最后添加用户组
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
+`reboot`后检查是否成功
+```
+docker run hello-world
+```
