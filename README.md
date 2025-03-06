@@ -36,7 +36,7 @@ sudo ubuntu-drivers install <填入驱动名>
 ```
 例如`sudo ubuntu-drivers install nvidia-driver-550-open`
 
-# 2. miniforge(anaconda 替代品)
+# 2. 最好的安装`python`包管理器的方式：miniforge(anaconda 替代品)
 前往`https://github.com/conda-forge/miniforge`下载`sh`文件，然后用以下命令安装，一路回车。所有需要选择`yes or no`的部分一路回车下去，全部使用自动填充默认值。
 ```
 bash Miniforge3-24.11.3-0-Linux-x86_64.sh
@@ -51,7 +51,7 @@ alias setconda='. ~/miniforge3/bin/activate'
 ```
 然后重新开一个终端，可以通过`setconda`来激活anaconda，这样不会影响系统自带python。
 
-# 2. 多 CUDA 版本共存
+# 3. 多 CUDA 版本共存
 
 尝试记录多CUDA版本在`ubuntu 22.04`上安装的过程。主要参考
 ```
