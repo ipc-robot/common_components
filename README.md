@@ -1,3 +1,18 @@
+# 0.系统安装
+安装完成之后，先进行换源(系统源、ROS源、python源)。
+```
+wget http://fishros.com/install -O fishros && . fishros
+```
+
+随后执行
+```
+sudo apt update
+sudo apt upgrade
+```
+更新完成后`reboot`
+
+然后进入`ubuntu`的系统更新器，再更新一遍内核，然后`reboot`。
+
 # 1. miniforge
 前往`https://github.com/conda-forge/miniforge`下载`sh`文件，然后用以下命令安装，一路回车。所有需要选择`yes or no`的部分一路回车下去，全部使用自动填充默认值。
 ```
