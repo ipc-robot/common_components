@@ -51,9 +51,8 @@ alias setconda='. ~/miniforge3/bin/activate'
 ```
 然后重新开一个终端，可以通过`setconda`来激活anaconda，这样不会影响系统自带python。
 
-# 3. 多 CUDA 版本共存
-
-尝试记录多CUDA版本在`ubuntu 22.04`上安装的过程。主要参考
+# 3. 最好的安装`CUDA`的方式（多CUDA并存)
+主要参考
 ```
 https://qiyuan-z.github.io/2022/01/04/Ubuntu%E5%A4%9A%E7%89%88%E6%9C%ACcuda%E5%AE%89%E8%A3%85%E4%B8%8E%E5%88%87%E6%8D%A2/
 ```
@@ -101,63 +100,7 @@ sudo ln -s /usr/local/cuda-11.8 /usr/local/cuda
 https://github.com/clash-verge-rev/clash-verge-rev
 ```
 
-# 4. 最好的安装NVIDIA显卡驱动的方式
-`https://ubuntu.com/server/docs/nvidia-drivers-installation`
-`https://askubuntu.com/questions/1445961/22-04-1-lts-network-unclaimed-for-wireless-adapter-and-ethernet-port`
-
-For desktop:
-```
-sudo ubuntu-drivers list
-```
-or, for servers:
-```
-sudo ubuntu-drivers list --gpgpu
-```
-You should see a list such as the following:
-```
-nvidia-driver-470
-nvidia-driver-470-server
-nvidia-driver-535
-nvidia-driver-535-open
-nvidia-driver-535-server
-nvidia-driver-535-server-open
-nvidia-driver-550
-nvidia-driver-550-open
-nvidia-driver-550-server
-nvidia-driver-550-server-open
-```
-
-Installing the drivers for generic use (e.g. desktop and gaming)
-
-You can either rely on automatic detection, which will install the driver that is considered the best match for your hardware:
-
-```
-sudo ubuntu-drivers install
-```
-
-Or you can tell the ubuntu-drivers tool which driver you would like installed. If this is the case, you will have to use the driver version (such as 535) that you saw when you used the ubuntu-drivers list command.
-
-Let’s assume we want to install the 535 driver:
-
-```
-sudo ubuntu-drivers install nvidia:535
-```
-
-Installing the drivers on servers and/or for computing purposes
-
-You can either rely on automatic detection, which will install the driver that is considered the best match for your hardware:
-
-```
-sudo ubuntu-drivers install --gpgpu
-```
-
-Or you can tell the ubuntu-drivers tool which driver you would like installed. If this is the case, you will have to use the driver version (such as 535) and the -server suffix that you saw when you used the ubuntu-drivers list --gpgpu command.
-
-Let’s assume we want to install the 535-server driver (listed as nvidia-driver-535-server):
-
-sudo ubuntu-drivers install --gpgpu nvidia:535-server
-
-
+#
 Ubuntu更改主目录文件名为英文
 Ubuntu的语言设置成中文之后，自己主目录下的桌面、下载、文档等文件夹全部为中文汉字，使用终端时，输入十分不方便。需要把文件夹改成英文，而不更改系统语言。
 
