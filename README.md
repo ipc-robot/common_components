@@ -50,7 +50,7 @@ sudo gedit ~/.bashrc
 alias setconda='. ~/miniforge3/bin/activate'
 ```
 然后重新开一个终端，可以通过`setconda`来激活`miniforge`，这样不会影响系统自带python。
-`Minoforge`的命令与`Anaconda`一致，你可以使用`conda`或`mamba`来获得加速的体验。
+`Minoforge`的命令与`Anaconda`一致，你可以使用`mamba`替换`conda`来获得加速。
 
 # 3. 最好的安装`CUDA`的方式（多CUDA并存)
 主要参考
